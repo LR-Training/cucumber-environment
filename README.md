@@ -28,4 +28,4 @@ vagrant up
 ```
 ### Step 3
 
-Any files/ folders in the cucumber-environment directory is mapped to tge ubuntu image in /vagrant directory. put your test files there so they can be run
+Any files/ folders in the cucumber-environment directory is mapped to the ubuntu image in /vagrant directory. put your test files there so they can be run
