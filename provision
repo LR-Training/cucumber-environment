@@ -8,6 +8,17 @@ echo "Installing git command line tools"
 
   apt-get install -y ruby-full
   apt-get install -y build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion
+echo "installing phantomjs"
+  cd ~
+  export PHANTOM_JS="phantomjs-1.9.7-linux-x86_64"
+  wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
+  mv $PHANTOM_JS.tar.bz2 /usr/local/share/
+  cd /usr/local/share/
+  tar xvjf $PHANTOM_JS.tar.bz2
+  ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/share/phantomjs
+  ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin/phantomjs
+  ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/bin/phantomjs
+
   gem install -y bundler
   cd /vagrant
 echo "Installing from Gemfile"
